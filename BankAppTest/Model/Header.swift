@@ -23,4 +23,12 @@ struct UserInfo: Decodable {
     var agency:String
     var balance:Float
     
+    init(userId: Int, name: String, bankAccount: String, agency: String, balance: Float) {
+        self.userId = userId
+        self.name = name
+        self.bankAccount = bankAccount
+        self.agency = agency
+        self.balance = balance
+    }
+    
 }

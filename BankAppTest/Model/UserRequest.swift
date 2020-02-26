@@ -11,6 +11,6 @@ import Foundation
 struct UserRequest {
     
     let resourceURL:URL
-    let apiKey = ""
+    let apiKey = Constants.String.voidString
     
 }

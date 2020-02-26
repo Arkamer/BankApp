@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC78C42C240582E100A9762D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78C42B240582E100A9762D /* Utilities.swift */; };
+		EC78C42E2405833800A9762D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78C42D2405833800A9762D /* Constants.swift */; };
 		ECA884B123F9EE0B00871EC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884B023F9EE0B00871EC8 /* AppDelegate.swift */; };
 		ECA884B323F9EE0B00871EC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884B223F9EE0B00871EC8 /* SceneDelegate.swift */; };
-		ECA884B523F9EE0B00871EC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884B423F9EE0B00871EC8 /* ViewController.swift */; };
 		ECA884B823F9EE0B00871EC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA884B623F9EE0B00871EC8 /* Main.storyboard */; };
 		ECA884BA23F9EE0D00871EC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA884B923F9EE0D00871EC8 /* Assets.xcassets */; };
 		ECA884BD23F9EE0D00871EC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA884BB23F9EE0D00871EC8 /* LaunchScreen.storyboard */; };
@@ -22,10 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC78C42B240582E100A9762D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		EC78C42D2405833800A9762D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ECA884AD23F9EE0B00871EC8 /* BankAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA884B023F9EE0B00871EC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECA884B223F9EE0B00871EC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ECA884B423F9EE0B00871EC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ECA884B723F9EE0B00871EC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECA884B923F9EE0D00871EC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECA884BC23F9EE0D00871EC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,7 +86,6 @@
 			children = (
 				ECA884C623F9EEA100871EC8 /* HomeViewController.swift */,
 				ECA884C423F9EE8200871EC8 /* LoginViewController.swift */,
-				ECA884B423F9EE0B00871EC8 /* ViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -104,6 +105,8 @@
 				ECA884B223F9EE0B00871EC8 /* SceneDelegate.swift */,
 				ECA884CD23FC5C0E00871EC8 /* Wallet.swift */,
 				ECA884CF23FC5EEE00871EC8 /* Header.swift */,
+				EC78C42B240582E100A9762D /* Utilities.swift */,
+				EC78C42D2405833800A9762D /* Constants.swift */,
 				ECA884D123FC606F00871EC8 /* UserRequest.swift */,
 			);
 			path = Model;
@@ -181,13 +184,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECA884D023FC5EEE00871EC8 /* Header.swift in Sources */,
+				EC78C42E2405833800A9762D /* Constants.swift in Sources */,
 				ECA884C723F9EEA100871EC8 /* HomeViewController.swift in Sources */,
 				ECA884D223FC606F00871EC8 /* UserRequest.swift in Sources */,
 				ECA884CE23FC5C0E00871EC8 /* Wallet.swift in Sources */,
 				ECA884C523F9EE8200871EC8 /* LoginViewController.swift in Sources */,
 				ECA884CB23FC467100871EC8 /* WalletCell.swift in Sources */,
-				ECA884B523F9EE0B00871EC8 /* ViewController.swift in Sources */,
 				ECA884B123F9EE0B00871EC8 /* AppDelegate.swift in Sources */,
+				EC78C42C240582E100A9762D /* Utilities.swift in Sources */,
 				ECA884B323F9EE0B00871EC8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

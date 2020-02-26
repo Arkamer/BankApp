@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    // Get request
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
