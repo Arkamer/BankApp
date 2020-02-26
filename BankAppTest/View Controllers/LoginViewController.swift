@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    
+    // MARK: - Outlets
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
 
     }
     
+    // MARK: - Methods
     func validateUser() -> String? {
         
         if userTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
@@ -40,7 +41,6 @@ class LoginViewController: UIViewController {
         
         return nil
     }
-    
     
     @IBAction func loginTapped(_ sender: Any) {
         // validate the user
