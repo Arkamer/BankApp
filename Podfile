@@ -7,6 +7,6 @@ target 'BankAppTest' do
 
   # Pods for BankAppTest
 
-  pod 'Alamofire', '~> 3.0'
+  pod 'Alamofire', '~> 4.0'
 
 end

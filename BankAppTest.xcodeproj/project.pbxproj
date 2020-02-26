@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -70,7 +70,6 @@
 				C2D8F77C4517154E9FB02A67 /* Pods-BankAppTest.debug.xcconfig */,
 				DE5A610CEF1B850DF890CFCA /* Pods-BankAppTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -95,9 +94,9 @@
 		ECA884AF23F9EE0B00871EC8 /* BankAppTest */ = {
 			isa = PBXGroup;
 			children = (
-				ECA884CC23FC469200871EC8 /* Model */,
+				ECA884CC23FC469200871EC8 /* Models */,
 				ECA884C923FC461600871EC8 /* Views */,
-				ECA884C823F9EECA00871EC8 /* View Controllers */,
+				ECA884C823F9EECA00871EC8 /* Controllers */,
 				ECA884B623F9EE0B00871EC8 /* Main.storyboard */,
 				ECA884B923F9EE0D00871EC8 /* Assets.xcassets */,
 				ECA884BB23F9EE0D00871EC8 /* LaunchScreen.storyboard */,
@@ -106,13 +105,13 @@
 			path = BankAppTest;
 			sourceTree = "<group>";
 		};
-		ECA884C823F9EECA00871EC8 /* View Controllers */ = {
+		ECA884C823F9EECA00871EC8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				ECA884C623F9EEA100871EC8 /* HomeViewController.swift */,
 				ECA884C423F9EE8200871EC8 /* LoginViewController.swift */,
 			);
-			path = "View Controllers";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		ECA884C923FC461600871EC8 /* Views */ = {
@@ -123,7 +122,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		ECA884CC23FC469200871EC8 /* Model */ = {
+		ECA884CC23FC469200871EC8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				ECA884B023F9EE0B00871EC8 /* AppDelegate.swift */,
@@ -134,7 +133,7 @@
 				EC78C42D2405833800A9762D /* Constants.swift */,
 				ECA884D123FC606F00871EC8 /* UserRequest.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

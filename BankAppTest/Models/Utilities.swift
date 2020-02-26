@@ -13,7 +13,7 @@ class Utilities {
     
     static func isPasswordValid(_ password : String) -> Bool {
         
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "ˆ(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", Constants.String.passRequirements)
         
         return passwordTest.evaluate(with: password)
     }
