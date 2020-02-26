@@ -8,23 +8,12 @@
 
 import Foundation
 
+
 struct Transactions: Decodable {
     
-    var wallet:[WalletList]
+    var statementList:[WalletList]
     
-    init(wallet: [WalletList]) {
-        
-        self.wallet = wallet
-        
-    }
-    
-}
-
-struct WalletList: Decodable {
-    
-    var statementList:Info
-    
-    init(statementList: Info) {
+    init(statementList: [WalletList]) {
         
         self.statementList = statementList
         
@@ -32,7 +21,7 @@ struct WalletList: Decodable {
     
 }
 
-struct Info: Decodable {
+struct WalletList: Decodable {
     
     var title:String
     var desc:String

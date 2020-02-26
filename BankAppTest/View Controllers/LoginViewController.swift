@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
         
         if userTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
         {
+            
             errorLabel.text = Constants.String.loginError
     
         }
