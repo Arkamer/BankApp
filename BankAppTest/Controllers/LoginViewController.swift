@@ -35,9 +35,10 @@ class LoginViewController: UIViewController {
         
         if Utilities.isPasswordValid(cleanedPassword) == false {
             
+            
             return Constants.String.passError
             
-        } // put some else if for the username
+        }
         
         return nil
     }
@@ -51,6 +52,19 @@ class LoginViewController: UIViewController {
             print(error!)
             
         } else {
+            // Send message/POST method
+            let login = LoginRequest(user: userTextField.text!, password: passwordTextField.text!)
+            
+            let postRequest = UserRequest(endpoint: Constants.String.login)
+            
+            postRequest.save( login, completion: { result in
+                switch result {
+                case .success(let message):
+                    print("The following message has been sent: \(message.user)")
+                case .failure(let error):
+                    print("An error occured: \(error)")
+                }
+            })
             // Transition to the home screen
             transitionToHome()
             

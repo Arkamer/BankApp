@@ -21,8 +21,8 @@ struct Constants {
         static let passError = "Please make sure your password is at least 8 characters, contains at least a special character and a number"
         static let loginError = "Please fill in all fields"
         static let voidString = ""
-        static let passRequirements = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$"
-        
+        static let passRequirements = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%#?&#])[A-Za-z\\d$@$!%*?&#]{6,8}"
+        static let login = "login"
     }
 }
 
