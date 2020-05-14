@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.isNavigationBarHidden = true
 
     }
     
@@ -26,18 +28,13 @@ class LoginViewController: UIViewController {
         
         if userTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
         {
-            
             errorLabel.text = Constants.String.loginError
-    
         }
         
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if Utilities.isPasswordValid(cleanedPassword) == false {
-            
-            
             return Constants.String.passError
-            
         }
         
         return nil
@@ -48,9 +45,7 @@ class LoginViewController: UIViewController {
         let error = validateUser()
         
         if error != nil {
-            
             print(error!)
-            
         } else {
             // Send message/POST method
             let login = LoginRequest(user: userTextField.text!, password: passwordTextField.text!)
@@ -60,13 +55,12 @@ class LoginViewController: UIViewController {
             postRequest.save( login, completion: { result in
                 switch result {
                 case .success(let message):
-                    print("The following message has been sent: \(message.user)")
+                    print("The following message has been sent: \(message.userAccount)")
+                    self.transitionToHome()
                 case .failure(let error):
                     print("An error occured: \(error)")
                 }
             })
-            // Transition to the home screen
-            transitionToHome()
             
         }
         
@@ -74,14 +68,16 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToHome() {
-        
         // Post request use name and password
-        
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
-        
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "loginToHomeSegue", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let homeViewController = segue.destination as! HomeViewController
+            self.present(homeViewController, animated: true, completion: nil)
+
     }
     
 }

@@ -20,7 +20,7 @@
 		ECA884C723F9EEA100871EC8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884C623F9EEA100871EC8 /* HomeViewController.swift */; };
 		ECA884CB23FC467100871EC8 /* WalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884CA23FC467100871EC8 /* WalletCell.swift */; };
 		ECA884CE23FC5C0E00871EC8 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884CD23FC5C0E00871EC8 /* Wallet.swift */; };
-		ECA884D023FC5EEE00871EC8 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884CF23FC5EEE00871EC8 /* Header.swift */; };
+		ECA884D023FC5EEE00871EC8 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884CF23FC5EEE00871EC8 /* LoginResponse.swift */; };
 		ECA884D223FC606F00871EC8 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884D123FC606F00871EC8 /* UserRequest.swift */; };
 		FDCA391CCD8B828C7C05395B /* Pods_BankAppTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F72A2252F19615AAD1CCE3 /* Pods_BankAppTest.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +44,7 @@
 		ECA884C623F9EEA100871EC8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ECA884CA23FC467100871EC8 /* WalletCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCell.swift; sourceTree = "<group>"; };
 		ECA884CD23FC5C0E00871EC8 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
-		ECA884CF23FC5EEE00871EC8 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		ECA884CF23FC5EEE00871EC8 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		ECA884D123FC606F00871EC8 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +89,7 @@
 		EC82902D2407622900DF9997 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				ECA884CF23FC5EEE00871EC8 /* LoginResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -150,7 +151,6 @@
 				ECA884B023F9EE0B00871EC8 /* AppDelegate.swift */,
 				ECA884B223F9EE0B00871EC8 /* SceneDelegate.swift */,
 				ECA884CD23FC5C0E00871EC8 /* Wallet.swift */,
-				ECA884CF23FC5EEE00871EC8 /* Header.swift */,
 				EC78C42B240582E100A9762D /* Utilities.swift */,
 				EC78C42D2405833800A9762D /* Constants.swift */,
 				EC82902A2407621000DF9997 /* URLs.swift */,
@@ -273,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECA884D023FC5EEE00871EC8 /* Header.swift in Sources */,
+				ECA884D023FC5EEE00871EC8 /* LoginResponse.swift in Sources */,
 				EC78C42E2405833800A9762D /* Constants.swift in Sources */,
 				ECA884C723F9EEA100871EC8 /* HomeViewController.swift in Sources */,
 				EC82902F2407682F00DF9997 /* LoginRequest.swift in Sources */,
