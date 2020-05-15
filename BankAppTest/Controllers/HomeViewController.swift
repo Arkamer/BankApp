@@ -10,7 +10,27 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    // Get request
+    // MARK: - Outlets
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var accountAndAgency: UILabel!
+    @IBOutlet weak var balance: UILabel!
+    
+    var loginResponse: LoginResponse?
+    
+    // MARK: - Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+
+        guard let responses = loginResponse else { return }
+
+        name.text! = responses.userAccount.name
+        accountAndAgency.text! = "\(responses.userAccount.agency) / \(responses.userAccount.bankAccount)"
+        balance.text! = "\(responses.userAccount.balance)"
+        
+
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -21,11 +41,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return cell
     }
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
 
 }
+

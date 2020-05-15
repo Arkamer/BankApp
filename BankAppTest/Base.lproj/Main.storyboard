@@ -120,12 +120,6 @@
                                                 <constraint firstItem="LaE-FZ-rkg" firstAttribute="top" secondItem="nQi-nB-aHM" secondAttribute="topMargin" constant="5" id="wsB-ut-Y4U"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="dateLabel" destination="LaE-FZ-rkg" id="Pdw-Vl-S04"/>
-                                            <outlet property="descLabel" destination="cie-yZ-Ql9" id="UQd-Ow-cPu"/>
-                                            <outlet property="titleLabel" destination="yuF-ZC-2K0" id="bUV-eI-ip3"/>
-                                            <outlet property="valueLabel" destination="E95-u9-rgT" id="aQz-uK-8vf"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -153,6 +147,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="XLd-ot-yYn"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="accountAndAgency" destination="zuJ-4R-yrq" id="Fpj-u6-mzB"/>
+                        <outlet property="balance" destination="bVM-mg-77v" id="55G-TJ-DMh"/>
+                        <outlet property="name" destination="jI5-8J-4Kh" id="Yz5-3f-pge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLG-0t-ICZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

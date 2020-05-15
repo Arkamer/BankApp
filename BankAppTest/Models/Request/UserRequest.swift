@@ -14,7 +14,7 @@ enum UserError: Error {
     case encodingProblem
 }
 
-struct UserRequest {
+class UserRequest {
 
     let resourceURL:URL
 
@@ -47,7 +47,7 @@ struct UserRequest {
                 
                 do {
                     let messageData = try JSONDecoder().decode(LoginResponse.self, from: jsonData)
-                    messageData.userAccount.agency
+                    //messageData.userAccount.agency
                     completion(.success(messageData))
                 } catch {
                     completion(.failure(.decodingProblem))

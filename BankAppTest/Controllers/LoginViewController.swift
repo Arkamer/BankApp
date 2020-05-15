@@ -16,17 +16,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    var loginResponse: LoginResponse?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.isNavigationBarHidden = true
-
+        
     }
     
     // MARK: - Methods
     func validateUser() -> String? {
         
-        if userTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        if userTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == Constants.String.voidString || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == Constants.String.voidString
         {
             errorLabel.text = Constants.String.loginError
         }
@@ -56,6 +58,7 @@ class LoginViewController: UIViewController {
                 switch result {
                 case .success(let message):
                     print("The following message has been sent: \(message.userAccount)")
+                    self.loginResponse = message
                     self.transitionToHome()
                 case .failure(let error):
                     print("An error occured: \(error)")
@@ -76,8 +79,12 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let homeViewController = segue.destination as! HomeViewController
-            self.present(homeViewController, animated: true, completion: nil)
-
+        
+        homeViewController.loginResponse = loginResponse
+        
+        self.present(homeViewController, animated: true, completion: nil)
+        
+        
     }
     
 }
