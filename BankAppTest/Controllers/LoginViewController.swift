@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
-        // validate the user
+        
         let error = validateUser()
         
         if error != nil {
@@ -51,10 +51,10 @@ class LoginViewController: UIViewController {
         } else {
             // Send message/POST method
             let login = LoginRequest(user: userTextField.text!, password: passwordTextField.text!)
+        
+            let postRequest = UserRequest()
             
-            let postRequest = UserRequest(endpoint: Constants.String.login)
-            
-            postRequest.save( login, completion: { result in
+            postRequest.postSaving( login, endpoint: Constants.String.login, completion: { result in
                 switch result {
                 case .success(let message):
                     print("The following message has been sent: \(message.userAccount)")
@@ -71,7 +71,7 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToHome() {
-        // Post request use name and password
+        
         DispatchQueue.main.async {
             self.performSegue(withIdentifier: "loginToHomeSegue", sender: nil)
         }
@@ -81,9 +81,6 @@ class LoginViewController: UIViewController {
         let homeViewController = segue.destination as! HomeViewController
         
         homeViewController.loginResponse = loginResponse
-        
-        self.present(homeViewController, animated: true, completion: nil)
-        
         
     }
     

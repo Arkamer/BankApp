@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pue-CN-oAZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pue-CN-oAZ">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,7 +75,7 @@
                                 <rect key="frame" x="16" y="325.5" width="343" height="321.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="walletCell" id="h8G-NR-ocV" customClass="WalletCell" customModule="BankAppTest" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="qualquerTeset" id="h8G-NR-ocV" customClass="WalletTableViewCell" customModule="BankAppTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h8G-NR-ocV" id="nQi-nB-aHM">
@@ -120,6 +120,12 @@
                                                 <constraint firstItem="LaE-FZ-rkg" firstAttribute="top" secondItem="nQi-nB-aHM" secondAttribute="topMargin" constant="5" id="wsB-ut-Y4U"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="LaE-FZ-rkg" id="ITk-Uo-qgM"/>
+                                            <outlet property="desc" destination="cie-yZ-Ql9" id="p6R-qE-6tM"/>
+                                            <outlet property="title" destination="yuF-ZC-2K0" id="gaK-OZ-fcA"/>
+                                            <outlet property="value" destination="E95-u9-rgT" id="Oum-SR-NZZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -151,6 +157,7 @@
                         <outlet property="accountAndAgency" destination="zuJ-4R-yrq" id="Fpj-u6-mzB"/>
                         <outlet property="balance" destination="bVM-mg-77v" id="55G-TJ-DMh"/>
                         <outlet property="name" destination="jI5-8J-4Kh" id="Yz5-3f-pge"/>
+                        <outlet property="walletTableView" destination="Bix-Sn-uyh" id="kFw-ch-ATI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLG-0t-ICZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

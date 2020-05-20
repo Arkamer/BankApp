@@ -23,6 +23,7 @@ struct Constants {
         static let voidString = ""
         static let passRequirements = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%#?&#])[A-Za-z\\d$@$!%*?&#]{6,8}"
         static let login = "login"
+        static let wallet = "statements/1"
     }
 }
 

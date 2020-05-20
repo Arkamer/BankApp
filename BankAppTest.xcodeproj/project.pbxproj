@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D71A8BC24736B3D003C03AE /* WalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71A8BB24736B3D003C03AE /* WalletTableViewCell.swift */; };
 		EC78C42C240582E100A9762D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78C42B240582E100A9762D /* Utilities.swift */; };
 		EC78C42E2405833800A9762D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78C42D2405833800A9762D /* Constants.swift */; };
-		EC82902B2407621000DF9997 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC82902A2407621000DF9997 /* URLs.swift */; };
 		EC82902F2407682F00DF9997 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC82902E2407682F00DF9997 /* LoginRequest.swift */; };
 		ECA884B123F9EE0B00871EC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884B023F9EE0B00871EC8 /* AppDelegate.swift */; };
 		ECA884B323F9EE0B00871EC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884B223F9EE0B00871EC8 /* SceneDelegate.swift */; };
@@ -25,12 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D71A8BB24736B3D003C03AE /* WalletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewCell.swift; sourceTree = "<group>"; };
 		C2D8F77C4517154E9FB02A67 /* Pods-BankAppTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAppTest.debug.xcconfig"; path = "Target Support Files/Pods-BankAppTest/Pods-BankAppTest.debug.xcconfig"; sourceTree = "<group>"; };
 		D8F72A2252F19615AAD1CCE3 /* Pods_BankAppTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankAppTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5A610CEF1B850DF890CFCA /* Pods-BankAppTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAppTest.release.xcconfig"; path = "Target Support Files/Pods-BankAppTest/Pods-BankAppTest.release.xcconfig"; sourceTree = "<group>"; };
 		EC78C42B240582E100A9762D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		EC78C42D2405833800A9762D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		EC82902A2407621000DF9997 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		EC82902E2407682F00DF9997 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		ECA884AD23F9EE0B00871EC8 /* BankAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA884B023F9EE0B00871EC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +75,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9D71A8BA24736AEC003C03AE /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D71A8BB24736B3D003C03AE /* WalletTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		EC82902C2407621F00DF9997 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA884CF23FC5EEE00871EC8 /* LoginResponse.swift */,
+				ECA884CD23FC5C0E00871EC8 /* Wallet.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -113,6 +122,7 @@
 		ECA884AF23F9EE0B00871EC8 /* BankAppTest */ = {
 			isa = PBXGroup;
 			children = (
+				9D71A8BA24736AEC003C03AE /* TableViewCell */,
 				ECA884CC23FC469200871EC8 /* Models */,
 				ECA884C823F9EECA00871EC8 /* Controllers */,
 				ECA884B623F9EE0B00871EC8 /* Main.storyboard */,
@@ -139,10 +149,8 @@
 				EC82902C2407621F00DF9997 /* Request */,
 				ECA884B023F9EE0B00871EC8 /* AppDelegate.swift */,
 				ECA884B223F9EE0B00871EC8 /* SceneDelegate.swift */,
-				ECA884CD23FC5C0E00871EC8 /* Wallet.swift */,
 				EC78C42B240582E100A9762D /* Utilities.swift */,
 				EC78C42D2405833800A9762D /* Constants.swift */,
-				EC82902A2407621000DF9997 /* URLs.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,10 +274,10 @@
 				EC78C42E2405833800A9762D /* Constants.swift in Sources */,
 				ECA884C723F9EEA100871EC8 /* HomeViewController.swift in Sources */,
 				EC82902F2407682F00DF9997 /* LoginRequest.swift in Sources */,
-				EC82902B2407621000DF9997 /* URLs.swift in Sources */,
 				ECA884D223FC606F00871EC8 /* UserRequest.swift in Sources */,
 				ECA884CE23FC5C0E00871EC8 /* Wallet.swift in Sources */,
 				ECA884C523F9EE8200871EC8 /* LoginViewController.swift in Sources */,
+				9D71A8BC24736B3D003C03AE /* WalletTableViewCell.swift in Sources */,
 				ECA884B123F9EE0B00871EC8 /* AppDelegate.swift in Sources */,
 				EC78C42C240582E100A9762D /* Utilities.swift in Sources */,
 				ECA884B323F9EE0B00871EC8 /* SceneDelegate.swift in Sources */,
