@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D71A8BC24736B3D003C03AE /* WalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71A8BB24736B3D003C03AE /* WalletTableViewCell.swift */; };
+		BFA4276D10AF76AE5D7E3FEA /* Pods_BankAppTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9323F56E8AC7273217230DFF /* Pods_BankAppTest.framework */; };
 		EC78C42C240582E100A9762D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78C42B240582E100A9762D /* Utilities.swift */; };
 		EC78C42E2405833800A9762D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC78C42D2405833800A9762D /* Constants.swift */; };
 		EC82902F2407682F00DF9997 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC82902E2407682F00DF9997 /* LoginRequest.swift */; };
@@ -21,14 +22,13 @@
 		ECA884CE23FC5C0E00871EC8 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884CD23FC5C0E00871EC8 /* Wallet.swift */; };
 		ECA884D023FC5EEE00871EC8 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884CF23FC5EEE00871EC8 /* LoginResponse.swift */; };
 		ECA884D223FC606F00871EC8 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA884D123FC606F00871EC8 /* UserRequest.swift */; };
-		FF03B4DF87776A7A3F43E791 /* Pods_BankAppTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D52C857E549F0F17B01141 /* Pods_BankAppTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63D52C857E549F0F17B01141 /* Pods_BankAppTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankAppTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		91391E0BB0C89940F518C520 /* Pods-BankAppTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAppTest.debug.xcconfig"; path = "Target Support Files/Pods-BankAppTest/Pods-BankAppTest.debug.xcconfig"; sourceTree = "<group>"; };
+		10863A305E851B1D07FEE8C8 /* Pods-BankAppTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAppTest.debug.xcconfig"; path = "Target Support Files/Pods-BankAppTest/Pods-BankAppTest.debug.xcconfig"; sourceTree = "<group>"; };
+		9323F56E8AC7273217230DFF /* Pods_BankAppTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankAppTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D71A8BB24736B3D003C03AE /* WalletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewCell.swift; sourceTree = "<group>"; };
-		A8EDA3488C0F12E75797D63D /* Pods-BankAppTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAppTest.release.xcconfig"; path = "Target Support Files/Pods-BankAppTest/Pods-BankAppTest.release.xcconfig"; sourceTree = "<group>"; };
+		E21B7E69A26A74EF149B1287 /* Pods-BankAppTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAppTest.release.xcconfig"; path = "Target Support Files/Pods-BankAppTest/Pods-BankAppTest.release.xcconfig"; sourceTree = "<group>"; };
 		EC78C42B240582E100A9762D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		EC78C42D2405833800A9762D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EC82902E2407682F00DF9997 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
@@ -51,17 +51,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF03B4DF87776A7A3F43E791 /* Pods_BankAppTest.framework in Frameworks */,
+				BFA4276D10AF76AE5D7E3FEA /* Pods_BankAppTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20CA15F4C074E71056B9DFB6 /* Frameworks */ = {
+		1B4D1583B40C23C8D0EB1C17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				63D52C857E549F0F17B01141 /* Pods_BankAppTest.framework */,
+				9323F56E8AC7273217230DFF /* Pods_BankAppTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -69,8 +69,8 @@
 		62491C95CB6FD1DF1CB8AE35 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				91391E0BB0C89940F518C520 /* Pods-BankAppTest.debug.xcconfig */,
-				A8EDA3488C0F12E75797D63D /* Pods-BankAppTest.release.xcconfig */,
+				10863A305E851B1D07FEE8C8 /* Pods-BankAppTest.debug.xcconfig */,
+				E21B7E69A26A74EF149B1287 /* Pods-BankAppTest.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -107,7 +107,7 @@
 				ECA884AF23F9EE0B00871EC8 /* BankAppTest */,
 				ECA884AE23F9EE0B00871EC8 /* Products */,
 				62491C95CB6FD1DF1CB8AE35 /* Pods */,
-				20CA15F4C074E71056B9DFB6 /* Frameworks */,
+				1B4D1583B40C23C8D0EB1C17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,11 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECA884C123F9EE0D00871EC8 /* Build configuration list for PBXNativeTarget "BankAppTest" */;
 			buildPhases = (
-				57CAC3C6795085F034230D1C /* [CP] Check Pods Manifest.lock */,
+				74DABDC21AC3621C760C4078 /* [CP] Check Pods Manifest.lock */,
 				ECA884A923F9EE0B00871EC8 /* Sources */,
 				ECA884AA23F9EE0B00871EC8 /* Frameworks */,
 				ECA884AB23F9EE0B00871EC8 /* Resources */,
-				23DFA8F59BACFA4E05853B08 /* [CP] Embed Pods Frameworks */,
+				5C15443A76A0A4ACE14DA369 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,7 +224,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23DFA8F59BACFA4E05853B08 /* [CP] Embed Pods Frameworks */ = {
+		5C15443A76A0A4ACE14DA369 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,7 +241,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BankAppTest/Pods-BankAppTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		57CAC3C6795085F034230D1C /* [CP] Check Pods Manifest.lock */ = {
+		74DABDC21AC3621C760C4078 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -422,17 +422,17 @@
 		};
 		ECA884C223F9EE0D00871EC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91391E0BB0C89940F518C520 /* Pods-BankAppTest.debug.xcconfig */;
+			baseConfigurationReference = 10863A305E851B1D07FEE8C8 /* Pods-BankAppTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63Z46HQK43;
+				DEVELOPMENT_TEAM = R7256CYX6L;
 				INFOPLIST_FILE = BankAppTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.acesarlessa.BankAppTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aclessa.BankAppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -441,17 +441,17 @@
 		};
 		ECA884C323F9EE0D00871EC8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8EDA3488C0F12E75797D63D /* Pods-BankAppTest.release.xcconfig */;
+			baseConfigurationReference = E21B7E69A26A74EF149B1287 /* Pods-BankAppTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63Z46HQK43;
+				DEVELOPMENT_TEAM = R7256CYX6L;
 				INFOPLIST_FILE = BankAppTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.acesarlessa.BankAppTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aclessa.BankAppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

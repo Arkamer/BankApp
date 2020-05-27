@@ -14,8 +14,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var accountAndAgency: UILabel!
     @IBOutlet weak var balance: UILabel!
-    
     @IBOutlet weak var walletTableView: UITableView!
+    
     
     // MARK: - Variables
     var loginResponse: LoginResponse?
@@ -69,5 +69,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return cell
     }
+    
+    
+    @IBAction func logoutTapped() {
+        let loginViewController = LoginViewController()
+               
+               navigationController?.popToRootViewController(animated: false)
+    }
+    
+    
 }
 

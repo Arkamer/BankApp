@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if Utilities.isPasswordValid(cleanedPassword) == false {
-            return Constants.String.passError
+            errorLabel.text = Constants.String.passError
         }
         
         return nil
@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
         if error != nil {
             print(error!)
         } else {
-            // Send message/POST method
+            
             let login = LoginRequest(user: userTextField.text!, password: passwordTextField.text!)
         
             let postRequest = UserRequest()
