@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         view.addGestureRecognizer(tap)
 
         
+        
     }
     
     // MARK: - Methods
