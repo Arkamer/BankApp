@@ -6,7 +6,7 @@
 //  Copyright © 2020 Ailton. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum UserError: Error {
     case responseProblem
@@ -14,24 +14,35 @@ enum UserError: Error {
     case encodingProblem
 }
 
-struct UserRequest {
+class UserRequest {
     
-    let resourceURL:URL
+    let baseURL = "https://bank-app-test.herokuapp.com/api/"
+    //let resourceURL: URL
     
-    init(endpoint: String) {
-        let resourceString = "https://bank-app-test.herokuapp.com/api/\(endpoint)"
-        guard let resourceURL = URL(string: resourceString) else { fatalError() }
-        
-        self.resourceURL = resourceURL
-    }
     
-    func save (_ messageToSave:LoginRequest, completion: @escaping(Result<LoginRequest, UserError>) -> Void) {
+    //    init(endpoint: String) {
+    //        let resourceString = "\(baseURL)\(endpoint)"
+    //        guard let resourceURL = URL(string: resourceString) else { fatalError() }
+    //
+    //        self.resourceURL = resourceURL
+    //    }
+    
+    func postSaving (_ messageToSave:LoginRequest,endpoint: String, completion: @escaping(Result<LoginResponse, UserError>) -> Void) {
         
         do {
-            var urlRequest = URLRequest(url: resourceURL)
+            guard let path = URL(string: baseURL + endpoint) else {
+                print("Invalid URL")
+                return}
+            
+            var urlRequest = URLRequest(url: path)
             urlRequest.httpMethod = "POST"
             urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-            urlRequest.httpBody = try JSONEncoder().encode(messageToSave)
+            
+            var requestBodyComponents = URLComponents()
+            requestBodyComponents.queryItems = [URLQueryItem(name: "user", value: messageToSave.user),
+                                                URLQueryItem(name: "password", value: messageToSave.password)]
+            
+            urlRequest.httpBody = requestBodyComponents.query?.data(using: .utf8)
             
             let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response, _ in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
@@ -39,17 +50,41 @@ struct UserRequest {
                     
                     return
                 }
-                
                 do {
-                    let messageData = try JSONDecoder().decode(LoginRequest.self, from: jsonData)
+                    let messageData = try JSONDecoder().decode(LoginResponse.self, from: jsonData)
                     completion(.success(messageData))
                 } catch {
                     completion(.failure(.decodingProblem))
                 }
             }
             dataTask.resume()
-        } catch {
-            completion(.failure(.encodingProblem))
         }
+    }
+    
+    func getSaving(endpoint: String ,completion: @escaping(Result<Wallet, UserError>) -> Void) {
+        
+        
+        guard let path = URL(string: baseURL + endpoint) else {
+            print("Invalid URL")
+            return }
+        
+        var urlRequest = URLRequest(url: path )
+        urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        
+        let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response, _ in
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                completion(.failure(.responseProblem))
+                
+                return
+            }
+            do {
+                let messageData = try JSONDecoder().decode(Wallet.self, from: jsonData)
+                completion(.success(messageData))
+            } catch {
+                completion(.failure(.decodingProblem))
+            }
+        }
+        dataTask.resume()
     }
 }

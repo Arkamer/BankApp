@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class LoginRequest: Codable {
+struct LoginRequest: Codable {
     var user: String
     var password: String
     
