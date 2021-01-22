@@ -61,12 +61,12 @@ class LoginViewController: UIViewController {
             // Send message/POST method
             let login = LoginRequest(user: userTextField.text!, password: passwordTextField.text!)
             
-            let postRequest = UserRequest(endpoint: Constants.String.login)
+            let postRequest = UserRequest()
             
-            postRequest.save( login, completion: { result in
+            postRequest.postSaving( login, endpoint: Constants.String.login, completion: { result in
                 switch result {
                 case .success(let message):
-                    print("The following message has been sent: \(message.user)")
+                    print("The following message has been sent: \(message.userAccount)")
                 case .failure(let error):
                     print("An error occured: \(error)")
                 }
